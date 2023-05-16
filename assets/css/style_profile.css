@@ -1,0 +1,8 @@
+.profile-icon{
+  width: 200px;
+  height: 200px;
+}
+
+::backdrop {
+    backdrop-filter: blur(5px);
+  }

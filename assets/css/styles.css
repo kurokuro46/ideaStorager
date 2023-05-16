@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+/* @charset "UTF-8"; */
+
+:root {
+    --primary: #0d6efd;
+    --gray: #888;
+    --body: #F5EFE5;
+    --white: #F4F5F7;
+    --point: #e68d64;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+    --box-shadow2: 0 8px 22px #e68d64cc;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--gray);
+    font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {  
+    display: none;
+}
+
+h1 {
+    font-size: 1.3rem;
+    color: var(--point);
+    font-weight: 800;
+}
+
+a {
+    /* color: var(--gray); */
+    text-decoration: none;
+    color:inherit;
+}
+
+i {
+    font-size: 1.5rem;
+    color:inherit;
+    font-weight: normal;
+}
+
+section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* header starts here */
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: var(--body);
+    padding: 10px 25px;
+    padding-right: 40px;
+    z-index: 20;
+}
+
+#logo-txt {
+    letter-spacing: -1.5px;
+    padding: 0px 10px;
+    width: 156px;
+}
+
+.post-container .post {
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    background-color: transparent;
+    border: 0.3rem solid #888;
+}
+   /*-- dialog --*/
+dialog {
+    width: 80%;
+    margin: auto;
+    max-width: 600px;
+}
+
+.modal-dialog {
+    border-radius: 12px;
+}
+
+.post-item {
+    height: 100px;
+    width: 40%;
+    line-height: 100px;
+    border-radius: 30px;
+    border:5px solid var(--gray);
+    background-color: var(--body);
+    text-align: center;
+}
+
+.post-item:hover {
+    background-color: var(--gray);
+    color: var(--point);
+}
+
+.search-container {
+    flex: 0 1 685px;
+    margin-left: 40px;
+}
+
+.search-box {
+    display: flex;
+    width: 100%;
+    position: relative;
+    border: 3px solid #888;
+    border-radius: 50px;
+}
+
+.search-container input {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 12px;
+    color: #888;
+    font-size: 1rem;
+}
+
+.search-container .search {
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    background-color: transparent;
+    border: none;
+    border-left: 3px solid #888;
+    
+    /* outline: none; */
+}
+
+.search-container .mic {
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.profile-container i {
+    margin-left: 25px;
+}
+
+.profile-box {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 25px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* body container */
+
+.body-container {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    top: 100px;
+    background-color: var(--body);
+}
+
+
+/* sidebar stars here */
+
+.sidebar {
+    padding-top: 10px;
+    width: 240px;
+    background-color: var(--body);
+    overflow-y: scroll;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.sidebar-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-item {
+    padding: 0 24px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.sidebar-item:hover {
+    background-color: var(--gray);
+    color: var(--point);
+}
+
+.sidebar-item i {
+    margin-right: 24px;
+}
+
+
+/* main content starts here */
+
+.content {
+    width: 100%;
+}
+
+
+/* idea container startrs here  */
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+}
+.card-effect:hover {
+    box-shadow: var(--box-shadow2);
+}
+
+
+.card-img{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.card-text{
+    width: 100%;
+    height: 80px;
+}
+.card-text .card-text-title{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.card-text .card-text-body{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.tweets-container {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.tweets-container p {
+    left: 100%;
+    margin: 0;
+    display: inline-block; 
+    white-space: nowrap;
+    animation-name: marquee; /*アニメーションのクラス名*/
+    animation-timing-function: linear;/*アニメーションのタイミング・進行割合の指定*/
+    animation-duration: 20s; /*アニメーションの速度*/
+    animation-iteration-count: infinite;/*アニメーションの動作回数*/
+    position: absolute;
+    color: var(--point);
+}
+
+.tweets-container p:hover{
+    animation-play-state: paused;
+}
+
+/* モーダルダイアログ表示中、背景ぼかし */
+::backdrop {
+    backdrop-filter: blur(5px);
+}
+
+/* responsive starts here */
+@keyframes marquee {
+    from { left: 100%;}
+    99%,to {left: -100%;}
+}
+
+@media (max-width:1650px) {
+    .sidebar {
+        width: 70px;
+        overflow-x: hidden;
+    }
+}

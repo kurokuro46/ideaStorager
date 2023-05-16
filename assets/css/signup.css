@@ -1,0 +1,30 @@
+
+:root {
+    --primary: #0d6efd;
+    --gray: #888;
+    --body: #F5EFE5;
+    --white: #F4F5F7;
+    
+  }
+  
+body {
+    font-family: Sora, "sans-serif";
+    background-color: var(--body); 
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+.container {
+    width: 50vw;
+    border: 3px solid var(--gray);
+    background-color: var(--white);
+    border-radius: 12px;
+}
+
+.login-main{
+    margin: 20px;
+}
