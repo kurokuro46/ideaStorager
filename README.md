@@ -2,5 +2,5 @@
 # アイデアを気軽にアップできるWebアプリケーション
 
 ## 環境
-php + MySOL(XAMPP)  
+php 8.1.6 + MySOL(XAMPP)  
 Bootstrap5
