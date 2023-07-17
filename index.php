@@ -56,8 +56,6 @@ $regist_tweets = getPostData_tweets();	//DBのデータ取得
                 <hr>
             </section>
 
-            <!-- チップス一覧 -->
-
             <!-- アイデア一覧 -->
             <section>
             <?php include "includes/ideas.php"; ?>

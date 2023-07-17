@@ -13,7 +13,6 @@ const close_btns = document.querySelectorAll('.js-dialog-close');
 close_btns.forEach((close_btn) => {
     close_btn.addEventListener('click', ({currentTarget}) => {
         currentTarget.closest('dialog').close();
-        dialog.showModal();
         //スクロール
         document.querySelector('body').style.setProperty('overflow', 'auto');
     });

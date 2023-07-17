@@ -7,7 +7,6 @@ class postIdea extends Connect {
     /**
      * アイデア投稿の情報をDBに登録
      * 
-     * @param string $title, $body, $imgPost
      */
     public static function register($user_id, $title, $body, $imgPost) {
         $pdo = self::connect();
@@ -19,6 +18,7 @@ class postIdea extends Connect {
             $stmt = $pdo->prepare("INSERT INTO postidea(user_id, title, body, created_at) Values (:user_id, :title, :body, :created_at)");
         else
             $stmt = $pdo->prepare("INSERT INTO postidea(user_id, title, body, imgPost, created_at) Values (:user_id, :title, :body, :imgPost, :created_at)");
+
         $stmt->bindParam(":user_id" , $user_id , PDO::PARAM_INT);
         $stmt->bindParam(":title", $title, PDO::PARAM_STR);
         $stmt->bindParam(":body" , $body, PDO::PARAM_STR);

@@ -76,7 +76,7 @@
                     <dialog data-dialog="edit">
                         <div class="modal-dialog">
                         <div class="modal-content">
-                            <form action="handle/handleUodateData.php" method="post" enctype="multipart/form-data">
+                            <form action="handle/handleUpdata.php" method="post" enctype="multipart/form-data">
                                 <div class="modal-header d-flex justify-content-between">
                                     <button type="button" class="js-dialog-close"><i class="ri-close-line"></i></button>
                                     <h5>プロフィール編集</h5>
@@ -130,8 +130,6 @@
     <script src="assets/js/dialogEdit.js"></script>
     <script src="assets/js/tweet.js"></script>
     <script src="assets/js/flowText.js"></script>
-    
-    <!-- <script src="assets/js/"></script> -->
     
 </body>
 

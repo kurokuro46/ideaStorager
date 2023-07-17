@@ -1,4 +1,6 @@
 <?php
+include '../core/init.php';
+
 $res =[];
 $post_data_tweets = getPostData();
 $cnt = 0;
@@ -14,9 +16,8 @@ echo json_encode($res);
 
 function getPostData(){
     //DB接続情報を設定します。
-    $pdo = new PDO(
-        "mysql:dbname=ideastorager;host=localhost","root","",array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET CHARACTER SET `utf8`")
-    );
+    $pdo = Connect::connect();
+    $pdo->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET CHARACTER SET `utf8`");
     //SQLを実行。
     $regist = $pdo->prepare("SELECT * FROM tweets order by created_at DESC limit 20");
     $regist->execute();
